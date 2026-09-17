@@ -1,7 +1,7 @@
 # 1.semesterprojekt
 
 
-Hej mit navn er Nick
+NickTran
 STEEEVEN
 Joppe
 Nikolaj 
