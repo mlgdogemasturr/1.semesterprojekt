@@ -1,8 +1,7 @@
 # 1.semesterprojekt
-<<<<<<< HEAD
-Hej mit navn er Nick
-=======
 
+
+Hej mit navn er Nick
 STEEEVEN
 Joppe
 Nikolaj 
