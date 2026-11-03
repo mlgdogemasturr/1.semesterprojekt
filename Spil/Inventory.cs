@@ -13,3 +13,4 @@ public class Inventory
     {
         //Requires weapon class
     }
+}
