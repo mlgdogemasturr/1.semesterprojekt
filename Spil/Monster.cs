@@ -10,9 +10,17 @@ public class Monster
        this.Monster_level = Monster_level_val;
        parts = new List<MonsterPart>();
     }
-    public void MonsterDefeat()
+    public bool MonsterDefeat()
     {
-        
+        if(parts.Count == 0)//parts.Count fortæller om hvormange dele parts der i listen
+        {
+          return true;  
+        }
+        else
+        {
+        return false;
+        }
+    
     }
     public void SpawnMonster()
     {
@@ -27,4 +35,3 @@ public class Monster
         parts.Remove(part);
     }
 }
-Steven
