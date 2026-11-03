@@ -53,5 +53,6 @@ public class Player
         {
             HealthPoints=HealthPoints+1;
         }
+        LevelCounter++;
     }
 }
