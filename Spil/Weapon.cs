@@ -11,4 +11,8 @@ public class Weapon
     public bool Attack(MonsterPart part){
         return Material == part.Weakness
     }
+    public void SpawnWeapon()
+    {
+        
+    }
 }
