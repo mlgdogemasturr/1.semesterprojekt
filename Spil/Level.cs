@@ -1,21 +1,28 @@
-class Level {
-    private Byte LevelCounter;
+class Level 
+{
+    private Byte levelCounter;
 
-    public NextLevel () {
-        
+    public Level(byte levelCounter) 
+    {
+        this.levelCounter = levelCounter;
     }
 
-    public CompleteLevel () {
-        if (monster == defeat)
-        return true;
+    public void NextLevel () 
+    {
+        levelCounter++;
     }
 
-    public RestartLevel () {
-        if (PlayerDeath)
-        return true;
+    public bool CompleteLevel () 
+    {
+        return monster.MonsterDefeat();
     }
 
-    public RemoveMonster () {
-        
+    public void RestartLevel (Player player) 
+    {
+        if (player.PlayerDeath()) 
+        {
+            monster.SpawnMonster();
+            player.PlayerRespawn();
+        }
     }
 }
