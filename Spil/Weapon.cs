@@ -1,14 +1,16 @@
 public class Weapon
 {
-    private string Weapon;
+    private string Name;
     private string Material;
 
-    public Weapon(Weapon_name, Weapon_mat){ //construct
-        Weapon = Weapon_name;
-        Material = Weapon_mat;
+    public Weapon(string Weapon_name, string Weapon_mat){ //construct
+        this.Name = Weapon_name;
+        this.Material = Weapon_mat;
     }
 
-    public bool Attack(MonsterPart part){
-        return Material == part.Weakness
+    public bool Attack(){
+        {
+            public 
+        }
     }
 }
