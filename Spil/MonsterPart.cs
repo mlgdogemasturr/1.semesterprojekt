@@ -22,8 +22,6 @@ class MonsterPart
         return false;
         }
     }
-        
-    
 }
 
 
