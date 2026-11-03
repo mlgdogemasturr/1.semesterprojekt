@@ -2,7 +2,7 @@ public class Monster
 {
     private string Name; 
     private List<MonsterPart> parts;
-   private byte Monster_level;
+    private byte Monster_level;
 
     public Monster(string Name_val, byte Monster_level_val)
     {

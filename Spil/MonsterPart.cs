@@ -1,7 +1,7 @@
 class MonsterPart
 {
-    private string MaterialType;
     private string Name;
+    private string MaterialType;
     
     public MonsterPart(string name_val, string materialType_val)
     {
