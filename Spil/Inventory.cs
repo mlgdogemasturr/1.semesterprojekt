@@ -13,14 +13,3 @@ public class Inventory
     {
         //Requires weapon class
     }
-<<<<<<< HEAD
-
-    public void Show(){
-        for (int i = 0; i < count; i++){
-            
-        }
-    }
-
-=======
->>>>>>> 1950ba0a34ac6bd1c428514792d2ac47d25fbb3e
-}
