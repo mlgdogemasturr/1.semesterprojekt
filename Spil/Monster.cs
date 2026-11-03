@@ -1,8 +1,8 @@
 public class Monster 
 {
-    string Name; 
+    private string Name; 
     private List<MonsterPart> parts;
-    byte Monster_level;
+   private byte Monster_level;
 
     public Monster(string Name_val, byte Monster_level_val)
     {
@@ -21,5 +21,9 @@ public class Monster
     public void AddMonsterPart(MonsterPart part)
     {
         parts.Add(part);
+    }
+    public void RemoveMonsterPart(MonsterPart part)
+    {
+        parts.Remove(part);
     }
 }

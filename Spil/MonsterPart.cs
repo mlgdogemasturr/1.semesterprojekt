@@ -1,14 +1,18 @@
 class MonsterPart
 {
-    public string[] Monster_Part;
-    public string name;
+    private string MaterialType;
+    private string Name;
     
-    public MonsterPart(string part_value){
-        Monster_Part = part_value;
+    public MonsterPart(string name_val, string materialType_val)
+    {
+        this.Name = name_val;
+        this.MaterialType = materialType_val; 
     }
-    
-    public void MonsterPart{
+    public bool Defeat()
+    {
+    if (MaterialType == base(Material)
+    }
         
-    } 
+    
 }
 
