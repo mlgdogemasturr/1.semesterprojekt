@@ -17,7 +17,4 @@ public class Inventory
         }
     }
 
-    public void Select(){
-        
-    }
 }

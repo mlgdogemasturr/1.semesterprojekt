@@ -1,7 +1,7 @@
 public class Weapon
 {
-    public string Weapon;
-    public string Material;
+    private string Weapon;
+    private string Material;
 
     public Weapon(Weapon_name, Weapon_mat){ //construct
         Weapon = Weapon_name;
@@ -10,9 +10,5 @@ public class Weapon
 
     public bool Attack(MonsterPart part){
         return Material == part.Weakness
-    }
-    public void SpawnWeapon()
-    {
-        
     }
 }
