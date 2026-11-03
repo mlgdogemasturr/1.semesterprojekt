@@ -1,7 +1,8 @@
+namespace Classes;
 public class Inventory
 {
     // attributes
-    private list<Weapon> weapons = new Weapon; 
+    private List <Weapon> weapons = new(); 
     
     //methods
     public Weapon(Weapon_name)  //construct
@@ -9,8 +10,14 @@ public class Inventory
         weapon = Weapon_name; //Name
     }
 
-    public void AddWeapon()
+    public void AddWeapon(Weapon a)
     {
-        //Requires weapon class
+        weapons.Add(a); //Requires weapon class
+    }
+
+    public void PrintInventory()
+    {
+        foreach (Weapon weapon in weapons)
+        Console.WriteLine(item.ToString());
     }
 }
