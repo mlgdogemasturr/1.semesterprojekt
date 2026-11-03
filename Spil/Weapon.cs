@@ -1,7 +1,7 @@
 public class Weapon
 {
-    private string Name;
-    private string Material;
+    private string Name; 
+    private string Material; 
 
     public Weapon(string Weapon_name, string Weapon_mat){ //construct
         this.Name = Weapon_name;
@@ -20,7 +20,7 @@ public class Weapon
     }
     
     public bool Attack(MonsterPart part){
-        return part.Defeat(this); //aktuelle weapon objekt når metoden køres.
+        return part.Defeat(this); // bruger nuværende våben objekt til at tjekke materialet
         }
     }
 }
