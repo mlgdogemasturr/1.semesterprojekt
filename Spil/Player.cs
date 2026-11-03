@@ -1,13 +1,15 @@
 public class Player
 {
-    private byte HealthPoints; // shorthand = HP
-    private int DeathCounter; // shorthand = DC
+    private static byte HealthPoints; // shorthand = HP
+    private static int DeathCounter; // shorthand = DC
 
+/*
     public Player(byte HealthPoints_val, int DeathCounter_val )
     {
         this.HealthPoints = HealthPoints_val;
         this.DeathCounter = DeathCounter_val;
     }
+  */
     
     public void LoseLife()
     {
@@ -25,16 +27,10 @@ public class Player
         
     }
     
-    public void PlayerRespawn()
-    {
-        
-    }
-    
-    
     public void ChooseMonsterPart()
     {
         Monster.PrintMonsterparts();
-        Console.WriteLine($"Choose Monsterpart 1-{MonsterParts.Length}:");
+        Console.WriteLine($"Choose Monsterpart 1 - {MonsterParts.Length}:");
         return Console.ReadLine();
     }
     
@@ -43,6 +39,7 @@ public class Player
         Inventory.PrintInventory();
         Console.WriteLine($"Choose weapon 1 - {Inventory.Length}:");
         return Console.ReadLine();
+        Attack();
     }
     
     public SetFullHP()
