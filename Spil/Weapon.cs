@@ -20,7 +20,7 @@ public class Weapon
     }
     
     public bool Attack(MonsterPart part){
-        return part.Defeat(this);
+        return part.Defeat(this); //aktuelle weapon objekt når metoden køres.
         }
     }
 }
