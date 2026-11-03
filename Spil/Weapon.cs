@@ -8,11 +8,19 @@ public class Weapon
         this.Material = Weapon_mat;
     }
 
-    public bool Attack(){
+    public bool HasMaterial(string Material_type){ //Metode kaldes fra MonsterPart.cs
+        if (Material == Material_type) //Er begge materialer ens så return true
         {
-            public 
+            return true; //
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    public bool Attack(MonsterPart part){
+        return part.Defeat(this);
         }
     }
 }
-
-Nick
