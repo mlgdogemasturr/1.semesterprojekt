@@ -14,7 +14,7 @@ class MonsterPart
     {
         if(!PartIsDefeated && weapon.HasMaterial(MaterialType))
         {
-            IsDefeated = true;//Hvis ikke den findes så kan vi besejre monsterdelen igen og igen
+            PartIsDefeated = true;//Hvis ikke den findes så kan vi besejre monsterdelen igen og igen
             return true;
         }
         else
