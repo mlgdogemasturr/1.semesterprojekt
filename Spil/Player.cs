@@ -1,58 +1,74 @@
 public class Player
 {
-    private static byte HealthPoints; // shorthand = HP
-    private static int DeathCounter; // shorthand = DC
+    private byte HealthPoints; // shorthand = HP
+    private int DeathCounter; // shorthand = DC
 
-/*
-    public Player(byte HealthPoints_val, int DeathCounter_val )
+    public Player(byte HealthPoints, int DeathCounter)
     {
-        this.HealthPoints = HealthPoints_val;
-        this.DeathCounter = DeathCounter_val;
+        this.HealthPoints = HealthPoints;
+        this.DeathCounter = DeathCounter;
     }
-  */
     
-    public void LoseLife()
+    public void LoseLife() 
     {
         HealthPoints--;
-        if (HealthPoints==0)
+
+        if (HealthPoints <= 0)
         {
             PlayerDeath();
-        }
-            
-        // Maybe more functionality should be put in this method
+        }   // Maybe more functionality should be put in this method
+    }
+    public bool IsDead()
+    {
+        return HealthPoints <= 0;
     }
     
     public void PlayerDeath()
     {
-        
+        DeathCounter++;
     }
     
-    public void ChooseMonsterPart()
+    public void PlayerRespawn()
+    {
+        SetFullHP();
+    }
+    
+    public string ChooseMonsterPart()
     {
         Monster.PrintMonsterparts();
-        Console.WriteLine($"Choose Monsterpart 1 - {MonsterParts.Length}:");
+        
+        Console.WriteLine($"Choose Monsterpart 1-{MonsterParts.Length}:");
         return Console.ReadLine();
     }
     
-    public ChooseWeapon()
+    public string ChooseWeapon()
     {
         Inventory.PrintInventory();
+
         Console.WriteLine($"Choose weapon 1 - {Inventory.Length}:");
         return Console.ReadLine();
-        Attack();
     }
     
     public SetFullHP()
     {
-        HealthPoints=3;
+        HealthPoints = 3;
     }
 
     public PickUpHP()
     {
         if (HealthPoints < 3)
         {
-            HealthPoints=HealthPoints+1;
+            HealthPoints++;
         }
-        LevelCounter++;
+    }
+
+    public byte GetHealthPoints()
+    {
+        return HealthPoints;
+    }
+
+    public int GetDeathCounter()
+    {
+        return DeathCounter;
     }
 }

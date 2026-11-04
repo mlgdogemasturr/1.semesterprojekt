@@ -1,14 +1,26 @@
 public class Weapon
 {
-    private string Weapon;
-    private string Material;
+    private string Name; 
+    private string Material; 
 
-    public Weapon(Weapon_name, Weapon_mat){ //construct
-        Weapon = Weapon_name;
-        Material = Weapon_mat;
+    public Weapon(string Weapon_name, string Weapon_mat){ //construct
+        this.Name = Weapon_name;
+        this.Material = Weapon_mat;
     }
 
+    public bool HasMaterial(string Material_type){ //Metode kaldes fra MonsterPart.cs
+        if (Material == Material_type) //Er begge materialer ens så return true
+        {
+            return true; //
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
     public bool Attack(MonsterPart part){
-        return Material == part.Weakness
+        return part.Defeat(this); // bruger nuværende våben objekt til at tjekke materialet
+        }
     }
 }

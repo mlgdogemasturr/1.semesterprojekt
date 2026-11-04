@@ -1,21 +1,28 @@
-class Level {
-    private Byte LevelCounter;
+class Level 
+{
+    private Byte levelCounter;
 
-    public NextLevel () {
-        
+    public Level(byte levelCounter) 
+    {
+        this.levelCounter = levelCounter;
     }
 
-    public CompleteLevel () {
-        if (monster == defeat)
-        return true;
+    public void NextLevel () 
+    {
+        levelCounter++;
     }
 
-    public RestartLevel () {
-        if (PlayerDeath)
-        return true;
+    public bool CompleteLevel () 
+    {
+        return monster.MonsterDefeat(); //Hvis monsteret er defeat er level complete
     }
 
-    public RemoveMonster () {
-        
+    public void RestartLevel (Player player) 
+    {
+        if (player.PlayerDeath()) // Hvis player er død, skal monsteret spawn og player skal respawn med full hp
+        {
+            monster.SpawnMonster();
+            player.PlayerRespawn();
+        }
     }
 }
