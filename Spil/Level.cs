@@ -14,12 +14,12 @@ class Level
 
     public bool CompleteLevel () 
     {
-        return monster.MonsterDefeat();
+        return monster.MonsterDefeat(); //Hvis monsteret er defeat er level complete
     }
 
     public void RestartLevel (Player player) 
     {
-        if (player.PlayerDeath()) 
+        if (player.PlayerDeath()) // Hvis player er død, skal monsteret spawn og player skal respawn med full hp
         {
             monster.SpawnMonster();
             player.PlayerRespawn();

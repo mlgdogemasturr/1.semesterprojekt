@@ -9,7 +9,7 @@ public class Player
         this.DeathCounter = DeathCounter;
     }
     
-    public void LoseLife()
+    public void LoseLife() 
     {
         HealthPoints--;
 
