@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathi\\OneDrive\\desktop\\1. semester\\1.semesterprojekt\\Spil\\Spil.csproj": {}
+    "C:\\Users\\steve\\Desktop\\1.semesterprojekt\\Spil\\Spil.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathi\\OneDrive\\desktop\\1. semester\\1.semesterprojekt\\Spil\\Spil.csproj": {
+    "C:\\Users\\steve\\Desktop\\1.semesterprojekt\\Spil\\Spil.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathi\\OneDrive\\desktop\\1. semester\\1.semesterprojekt\\Spil\\Spil.csproj",
+        "projectUniqueName": "C:\\Users\\steve\\Desktop\\1.semesterprojekt\\Spil\\Spil.csproj",
         "projectName": "Spil",
-        "projectPath": "C:\\Users\\mathi\\OneDrive\\desktop\\1. semester\\1.semesterprojekt\\Spil\\Spil.csproj",
-        "packagesPath": "C:\\Users\\mathi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathi\\OneDrive\\desktop\\1. semester\\1.semesterprojekt\\Spil\\obj\\",
+        "projectPath": "C:\\Users\\steve\\Desktop\\1.semesterprojekt\\Spil\\Spil.csproj",
+        "packagesPath": "C:\\Users\\steve\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\steve\\Desktop\\1.semesterprojekt\\Spil\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mathi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\steve\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

@@ -1,0 +1,5 @@
+C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\Spil.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\Spil.AssemblyInfoInputs.cache
+C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\Spil.AssemblyInfo.cs
+C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\Spil.csproj.CoreCompileInputs.cache
+C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\Spil.sourcelink.json
