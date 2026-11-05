@@ -26,11 +26,13 @@ public class Player
     public void PlayerDeath()
     {
         DeathCounter++;
+        RestartLevel();
     }
     
-    public void PlayerRespawn()
+    public void PlayerSpawn()
     {
-        SetFullHP();
+        HealthPoints = 3;
+        Print.HealthPoints();
     }
     
     public string ChooseMonsterPart()
@@ -49,17 +51,13 @@ public class Player
         return Console.ReadLine();
     }
     
-    public SetFullHP()
-    {
-        HealthPoints = 3;
-    }
-
     public PickUpHP()
     {
         if (HealthPoints < 3)
         {
             HealthPoints++;
         }
+        else Console.WriteLine("Du har ikke mistet et liv. Godt arbejde!");
     }
 
     public byte GetHealthPoints()

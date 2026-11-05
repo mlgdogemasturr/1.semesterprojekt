@@ -19,10 +19,7 @@ class Level
 
     public void RestartLevel (Player player) 
     {
-        if (player.PlayerDeath()) // Hvis player er død, skal monsteret spawn og player skal respawn med full hp
-        {
-            monster.SpawnMonster();
-            player.PlayerRespawn();
-        }
+        player.PlayerSpawn();
+        monster.SpawnMonster();
     }
 }

@@ -6,7 +6,7 @@ class Game {
   static Context  context  = new Context(world.GetEntry());
   
   static void Main (string[] args) {
-    Console.WriteLine("Welcome to the World of Zuul!");
+    Console.WriteLine("Welcome to the World of Trash!");
     
     context.GetCurrent().Welcome();
     
@@ -20,7 +20,7 @@ class Game {
       string command = elements[0];
       string[] parameters = GetParameters(elements);
       
-      switch (command) {
+      switch (command) { //possible actions
         case "exit":
         case "quit":
         case "bye":
@@ -34,7 +34,7 @@ class Game {
           context.Transition(parameters[0]);
           break;
         case "help":
-          Console.WriteLine(" - exit  Exit the program");
+          Console.WriteLine(" - exit  Exit the program"); //should be updated
           Console.WriteLine(" - quit  Exit the program");
           Console.WriteLine(" - bye   Exit the program");
           Console.WriteLine(" - go    Follow an exit");
