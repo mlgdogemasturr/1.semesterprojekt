@@ -14,15 +14,12 @@ class Level
 
     public bool CompleteLevel () 
     {
-        return monster.MonsterDefeat();
+        return monster.MonsterDefeat(); //Hvis monsteret er defeat er level complete
     }
 
     public void RestartLevel (Player player) 
     {
-        if (player.PlayerDeath()) 
-        {
-            monster.SpawnMonster();
-            player.PlayerRespawn();
-        }
+        player.PlayerSpawn();
+        monster.SpawnMonster();
     }
 }

@@ -19,6 +19,21 @@ public class Weapon
         }
     }
     
+    public string GetName()
+    {
+        return Name;
+    }
+
+    public string GetMaterial()
+    {
+        return Material;
+    }
+
+    public override string ToString ()
+    {
+        return $"\nName: {GetName()} \nMaterial: {GetMaterial()}$";
+    }
+    
     public bool Attack(MonsterPart part){
         return part.Defeat(this); // bruger nuværende våben objekt til at tjekke materialet
         }
