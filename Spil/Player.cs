@@ -1,72 +1,31 @@
-public class Player
+class Player
 {
-    private byte HealthPoints; // shorthand = HP
-    private int DeathCounter; // shorthand = DC
+    private const byte MaxHealth = 3;            // const = fast værdi, kan ikke ændres. Max liv
+    private byte healthPoints = MaxHealth;       // Nuværende liv, starter på max
+    private int deathCounter = 0;                // Hvor mange gange spilleren er død
 
-    public Player(byte HealthPoints, int DeathCounter)
-    {
-        this.HealthPoints = HealthPoints;
-        this.DeathCounter = DeathCounter;
-    }
-    
-    public void LoseLife() 
-    {
-        HealthPoints--;
+    public byte GetHealthPoints() { return healthPoints; }   // Getter: liv
+    public int GetDeathCounter() { return deathCounter; }    // Getter: dødstæller
 
-        if (HealthPoints <= 0)
-        {
-            PlayerDeath();
-        }   // Maybe more functionality should be put in this method
-    }
-    public bool IsDead()
+    // Spilleren mister ét liv
+    public void LoseLife()
     {
-        return HealthPoints <= 0;
+        if (healthPoints > 0) healthPoints--;   // Tjek først, så byte ikke går under 0
     }
-    
-    public void PlayerDeath()
-    {
-        DeathCounter++;
-        RestartLevel();
-    }
-    
-    public void PlayerSpawn()
-    {
-        HealthPoints = 3;
-        Print.HealthPoints();
-    }
-    
-    public string ChooseMonsterPart()
-    {
-        Monster.PrintMonsterparts();
-        
-        Console.WriteLine($"Choose Monsterpart 1-{MonsterParts.Length}:");
-        return Console.ReadLine();
-    }
-    
-    public string ChooseWeapon()
-    {
-        Inventory.PrintInventory();
 
-        Console.WriteLine($"Choose weapon 1 - {Inventory.Length}:");
-        return Console.ReadLine();
-    }
-    
-    public PickUpHP()
+    public bool IsDead() { return healthPoints == 0; }   // Død hvis liv er 0
+
+    // Genopliv spilleren
+    public void Respawn()
     {
-        if (HealthPoints < 3)
-        {
-            HealthPoints++;
-        }
+        deathCounter++;              // Tæl en død op
+        healthPoints = MaxHealth;    // Fyld liv op igen
+    }
+
+    // Saml et ekstra liv op (kan ikke overstige max)
+    public void PickUpHP()
+    {
+        if (healthPoints < MaxHealth) healthPoints++;
         else Console.WriteLine("Du har ikke mistet et liv. Godt arbejde!");
-    }
-
-    public byte GetHealthPoints()
-    {
-        return HealthPoints;
-    }
-
-    public int GetDeathCounter()
-    {
-        return DeathCounter;
     }
 }

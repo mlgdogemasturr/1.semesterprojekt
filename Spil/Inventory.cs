@@ -1,28 +1,21 @@
-namespace Classes;
-using System.Collections;
-
-public class Inventory
+class Inventory
 {
-    // attributes
-    private List <Weapon> weapons = new(); 
+    private List<Weapon> weapons = new List<Weapon>();   // Spillerens våben (starter tom)
 
-    /*
-    //construct
-    public Weapon(Weapon_name)  
+    public void AddWeapon(Weapon w) { weapons.Add(w); }  // Tilføj et våben til listen
+
+    // Henter et våben ud fra spillerens nummer (1-baseret)
+    public Weapon? GetWeapon(int index)
     {
-        weapon = Weapon_name; //Name
-    }
-    */      //should not be relevant, the add function should be doing what this constructor is trying to do
-    
-    //methods
-    public void AddWeapon(Weapon a)
-    {
-        weapons.Add(a); //Requires weapon class
+        if (index < 1 || index > weapons.Count) return null;   // Ugyldigt nummer
+        return weapons[index - 1];                             // -1 fordi listen starter ved 0
     }
 
+    // Skriver inventory ud som nummereret liste
     public void PrintInventory()
     {
-        foreach (Weapon weapon in weapons)
-        Console.WriteLine(item.ToString());
+        if (weapons.Count == 0) { Console.WriteLine(" (tomt)"); return; }   // Hvis tomt: skriv det og stop
+        for (int i = 0; i < weapons.Count; i++)
+            Console.WriteLine($" {i + 1}. {weapons[i]}");
     }
 }

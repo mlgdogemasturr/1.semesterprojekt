@@ -1,31 +1,38 @@
 class MonsterPart
 {
-    private string Name;
-    private string MaterialType;
-    private bool PartIsDefeated;//Dens tilstand
+    private string name;          // Delens navn, fx "Låg"
+    private string materialType;  // Hvilket materiale der skal til for at besejre den, fx "metal"
+    private bool isDefeated;      // Er delen besejret? (delens tilstand)
 
-    // constructor
-    public MonsterPart(string name_val, string materialType_val)
+    // Constructor: kaldes, når vi skriver "new MonsterPart(...)"
+    public MonsterPart(string name, string materialType)
     {
-        this.Name = name_val;
-        this.MaterialType = materialType_val; 
-        this.PartIsDefeated = false;//Starter med at være false dvs monsteret er ikke besejret endnu
+        this.name = name;                  // Gem navnet i objektets felt (this. skelner felt fra parameter)
+        this.materialType = materialType;  // Gem materialet
+        this.isDefeated = false;           // Delen starter som ikke-besejret
     }
 
-    // method
-    public bool Defeat(Weapon weapon)//Bruges til at vide hvilket våben som bruges til at Defeat monsterdelen
+    public string GetName() { return name; }           // Getter: lader andre klasser læse navnet
+    public bool IsDefeated() { return isDefeated; }    // Getter: er delen besejret?
+    public void Reset() { isDefeated = false; }        // Gør delen "levende" igen (bruges ved genstart af level)
+
+    // Forsøger at besejre delen med et våben. Returnerer true hvis det lykkedes
+    public bool Defeat(Weapon weapon)
     {
-        if(!PartIsDefeated && weapon.HasMaterial(MaterialType))
+        // Kun hvis delen ikke allerede er besejret OG våbnet har det rigtige materiale
+        if (!isDefeated && weapon.HasMaterial(materialType))
         {
-            PartIsDefeated = true;//Hvis ikke den findes så kan vi besejre monsterdelen igen og igen
-            Console.WriteLine($"{MonsterPart} er blevet besejret!");
-            return true;
+            isDefeated = true;                                      // Markér delen som besejret
+            Console.WriteLine($"{name} er blevet besejret!");       // $"..." indsætter variablen {name} i teksten
+            return true;                                            // Fortæl kalderen, at det lykkedes
         }
-        else
-        {
-        return false;
-        }
+        return false;   // Forkert materiale eller allerede besejret
+    }
+
+    // Overskriver ToString, så Console.WriteLine(part) skriver noget læsbart
+    public override string ToString()
+    {
+        // ? : er en kort if/else: tilføj " [besejret]" kun hvis isDefeated er true
+        return $"{name} ({materialType})" + (isDefeated ? " [besejret]" : "");
     }
 }
-
-

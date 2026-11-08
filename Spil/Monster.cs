@@ -1,37 +1,41 @@
-public class Monster 
+class Monster
 {
-    private string Name; 
-    private List<MonsterPart> parts;
-    private byte Monster_level;
+    private string name;                                        // Monsterets navn
+    private List<MonsterPart> parts = new List<MonsterPart>();  // Listen af monsterets dele (starter tom)
 
-    public Monster(string Name_val, byte Monster_level_val)
+    public Monster(string name)
     {
-       this.Name = Name_val;
-       this.Monster_level = Monster_level_val;
-       parts = new List<MonsterPart>();
+        this.name = name;   // Gem navnet
     }
-    public bool MonsterDefeat()
+
+    public string GetName() { return name; }   // Getter til navnet
+
+    // Tilføjer en del til monsteret (bruges i World.cs, når monsteret bygges)
+    public void AddMonsterPart(MonsterPart part) { parts.Add(part); }
+
+    // Monsteret er besejret, når ALLE dele er besejret
+    public bool IsDefeated()
     {
-        if(parts.Count == 0)//parts.Count fortæller om hvormange dele parts der i listen
-        {
-          return true;  
-        }
-        else
-        {
-        return false;
-        }
-    
+        return parts.All(p => p.IsDefeated());   // All(...) giver true, hvis betingelsen gælder for hver del
     }
-    public void SpawnMonster()
+
+    // Henter en del ud fra spillerens nummer (1, 2, 3 ...). ? efter typen betyder "kan være null"
+    public MonsterPart? GetPart(int index)
     {
-        
+        if (index < 1 || index > parts.Count) return null;   // Ugyldigt nummer: returnér null
+        return parts[index - 1];                             // Lister starter ved 0, spillere tæller fra 1, derfor -1
     }
-    public void AddMonsterPart(MonsterPart part)
+
+    // Skriver alle dele ud som en nummereret liste
+    public void PrintParts()
     {
-        parts.Add(part);
+        for (int i = 0; i < parts.Count; i++)
+            Console.WriteLine($" {i + 1}. {parts[i]}");   // i+1, så listen starter ved 1
     }
-    public void RemoveMonsterPart(MonsterPart part)
+
+    // Gør alle dele levende igen (genstart af level)
+    public void Reset()
     {
-        parts.Remove(part);
+        foreach (MonsterPart part in parts) part.Reset();   // Gennemløb hver del og nulstil den
     }
 }
