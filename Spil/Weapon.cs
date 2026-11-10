@@ -20,7 +20,7 @@ class Weapon : Item
         // "this" = det Weapon-objekt, vi står i lige nu (fx Metalbatten).
         // Vi sender sig selv ind i inventory-listen, så våbnet bliver en del af spillerens ting
         inventory.AddWeapon(this);
-        Console.WriteLine($"Våben tilføjet: {name} ({material})");
+        Console.WriteLine($"\nVåben tilføjet: {name} ({material})");
     }
     
     // Læsbar tekst, når våbnet printes

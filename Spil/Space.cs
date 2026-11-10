@@ -36,27 +36,27 @@ class Space : Node   // Space arver fra Node, så et rum kan forbindes med andre
     public void PrintLoot()
     {
         if (!HasAvailableLoot()) return;
-        Console.WriteLine("Du ser følgende på jorden:");
+        Console.WriteLine("\nDu ser følgende på jorden:");
         foreach (Item item in loot)
-        Console.WriteLine(" - " + item.GetName());
-        Console.WriteLine("Skriv 'samleOp' for at samle det op.");
+        Console.WriteLine("\n - " + item.GetName());
+        Console.WriteLine("\nSkriv 'samleOp' for at samle det op.");
     }
     // Skrives, når spilleren træder ind i rummet
     public void Welcome()
     {
-        Console.WriteLine("Du er nu i: " + name);
+        Console.WriteLine("\nDu er nu i: " + name);
         if (HasLivingMonster())
         {
-            Console.WriteLine($"Du ser {monster!.GetName()} nærme sig!");   // ! = "jeg ved, den ikke er null her"
+            Console.WriteLine($"\nDu ser {monster!.GetName()} nærme sig!");   // ! = "jeg ved, den ikke er null her"
             monster.PrintParts(); // Vis monsterets dele
-            Console.WriteLine("Angrib med: angrib <del-nr> <våben-nr>");
+            Console.WriteLine("\nAngrib med: angrib <del-nr> <våben-nr>");
         }
 
         PrintLoot();
         if (!IsFinal())
 
         {
-        Console.WriteLine("Udgange:");
+        Console.WriteLine("\nUdgange:");
         foreach (string exit in edges.Keys)       // edges.Keys = alle retninger ("door", "north" ...)
             Console.WriteLine(" - " + exit);
         }

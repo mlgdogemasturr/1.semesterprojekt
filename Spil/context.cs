@@ -48,15 +48,15 @@ class Context
         List<Item> items = current.TakeLoot();   // Hent alt loot og tøm rummet. Tom liste, hvis monsteret lever
         if (items.Count == 0)                    // Count = antal elementer i listen
         {
-            Console.WriteLine("Der er intet at samle op.");
+            Console.WriteLine("\nDer er intet at samle op.");
             return;
         }
         foreach (Item item in items)             // Gennemgå hver ting i listen, én ad gangen
             item.PickUp(player, inventory);      // Hver ting ved selv, hvad der skal ske (våben → inventory, liv → +1 HP)
 
-        Console.WriteLine("Dit inventory:");
+        Console.WriteLine("\nDit inventory:");
         inventory.PrintInventory();              // Vis spillerens våben efter opsamling
-        Console.WriteLine("Du kan nu gå videre.");
+        Console.WriteLine("\nDu kan nu gå videre.");
     }
 
     // ---------- Angrib ("attack 1 2" = del nr. 1 med våben nr. 2) ----------
@@ -65,7 +65,7 @@ class Context
         Monster? monster = current.GetMonster();   // Hent rummets monster (kan være null)
         if (!current.HasLivingMonster() || monster == null)   // ! = "ikke". Intet levende monster = intet at angribe
         {
-            Console.WriteLine("Der er intet monster at angribe her.");
+            Console.WriteLine("\nDer er intet monster at angribe her.");
             return;
         }
 
@@ -77,7 +77,7 @@ class Context
             || !int.TryParse(parameters[0], out int partNo)
             || !int.TryParse(parameters[1], out int weaponNo))
         {
-            Console.WriteLine("Brug: angrib <del-nr> <våben-nr>");
+            Console.WriteLine("\nBrug: angrib <del-nr> <våben-nr>");
             return;
         }
 
@@ -85,7 +85,7 @@ class Context
         Weapon? weapon = inventory.GetWeapon(weaponNo);     // Find våbnet ud fra nummeret (null hvis ugyldigt)
         if (part == null || weapon == null)                 // Et af numrene var forkert
         {
-            Console.WriteLine("Ugyldigt valg af del eller våben.");
+            Console.WriteLine("\nUgyldigt valg af del eller våben.");
             return;
         }
 
@@ -93,10 +93,10 @@ class Context
         {
             if (monster.IsDefeated())                       // Var det den sidste del på monsteret?
             {
-                Console.WriteLine("Monster besejret! Godt arbejde.");
+                Console.WriteLine("\nMonster besejret! Godt arbejde.");
                 if (current.IsFinal())                      // Er det sidste rum? Så er spillet vundet
                 {
-                    Console.WriteLine("Du har sorteret skraldets verden. Du har vundet! 🎉");
+                    Console.WriteLine("\nDu har sorteret skraldets verden. Du har vundet! 🎉");
                     done = true;                            // Game's løkke stopper, når IsDone() giver true
                 }
                 else
@@ -108,7 +108,7 @@ class Context
         else                                                // Forkert materiale
         {
             player.LoseLife();                              // Mist ét liv
-            Console.WriteLine($"Forkert våben! Liv tilbage: {player.GetHealthPoints()}");
+            Console.WriteLine($"\nForkert våben! Liv tilbage: {player.GetHealthPoints()}");
             if (player.IsDead()) RestartLevel();            // Ingen liv tilbage? Genstart leveled
         }
     }
@@ -118,7 +118,7 @@ class Context
     {
         player.Respawn();                    // Fyld liv op til 3 og tæl dødstælleren op
         current.GetMonster()?.Reset();       // ?. = kun kald Reset(), hvis monsteret ikke er null. Gør alle dele levende igen
-        Console.WriteLine($"Du døde. Dødsfald i alt: {player.GetDeathCounter()}");
+        Console.WriteLine($"\nDu døde. Dødsfald i alt: {player.GetDeathCounter()}");
         current.Welcome();                   // Vis rummet igen, som da du kom ind
     }
 
