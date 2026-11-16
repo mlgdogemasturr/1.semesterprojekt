@@ -70,7 +70,7 @@ class Space : Node   // Space arver fra Node, så et rum kan forbindes med andre
     
     public static void PleaseShowExits()
     {
-        ShowExits();
+        ShowExits(); //????
     }
 
 
