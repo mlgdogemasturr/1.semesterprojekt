@@ -1,3 +1,4 @@
+namespace trash;
 class MonsterPart
 {
     private string name;          // Delens navn, fx "Låg"
@@ -33,6 +34,6 @@ class MonsterPart
     public override string ToString()
     {
         // ? : er en kort if/else: tilføj " [besejret]" kun hvis isDefeated er true
-        return $"{name} ({materialType})" + (isDefeated ? " [besejret]" : "");
+        return $"{name}" + (isDefeated ? " [besejret]" : "");
     }
 }

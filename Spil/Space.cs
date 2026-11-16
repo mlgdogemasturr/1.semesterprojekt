@@ -1,3 +1,4 @@
+namespace trash;
 class Space : Node   // Space arver fra Node, så et rum kan forbindes med andre rum
 {
     private Monster? monster;   // Rummets monster (kan være null = intet monster)
@@ -9,6 +10,7 @@ class Space : Node   // Space arver fra Node, så et rum kan forbindes med andre
     public Monster? GetMonster() { return monster; }          // Hent rummets monster
     public void AddLoot(Item item) { loot.Add(item); }               // Placér et våben i rummet
 
+    
     // Er der et monster, som stadig er i live?
     public bool HasLivingMonster()
     {
@@ -56,11 +58,22 @@ class Space : Node   // Space arver fra Node, så et rum kan forbindes med andre
         if (!IsFinal())
 
         {
-        Console.WriteLine("\nUdgange:");
+
+        ShowExits();
+        /*
+        Console.WriteLine("\nUdgang:");
         foreach (string exit in edges.Keys)       // edges.Keys = alle retninger ("door", "north" ...)
             Console.WriteLine(" - " + exit);
+            */
         }
     }    
+    
+    public static void PleaseShowExits()
+    {
+        ShowExits();
+    }
+
+
 
     public void Goodbye() { }   // Plads til noget, der skal ske, når man forlader rummet
 

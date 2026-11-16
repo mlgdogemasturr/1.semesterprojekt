@@ -1,3 +1,4 @@
+namespace trash; 
 class Monster
 {
     private string name;                                        // Monsterets navn

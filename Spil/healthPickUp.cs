@@ -1,3 +1,4 @@
+namespace trash;
 class HealthPickup : Item
 {
     public HealthPickup() : base("Ekstra liv") { }

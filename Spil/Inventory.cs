@@ -1,3 +1,4 @@
+namespace trash;
 class Inventory
 {
     private List<Weapon> weapons = new List<Weapon>();   // Spillerens våben (starter tom)
