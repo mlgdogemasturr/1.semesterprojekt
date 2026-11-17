@@ -1,5 +1,5 @@
 namespace trash;
-using trash;
+
 class Context
 {
     // ---------- Felter: det Context husker under hele spillet ----------
@@ -89,8 +89,10 @@ class Context
             Console.WriteLine("\nUgyldigt valg af del eller våben.");
             return;
         }
-
-        if (weapon.Attack(part))                            // Rigtigt materiale? (true = delen er besejret)
+        
+        bool defeated = weapon.Attack(part);
+        monster.PrintParts();
+        if (defeated)                            // Rigtigt materiale? (true = delen er besejret)
         {
             if (monster.IsDefeated())                       // Var det den sidste del på monsteret?
             {
@@ -124,6 +126,7 @@ class Context
             Console.WriteLine($"\nForkert våben! Liv tilbage: {player.GetHealthPoints()}");
             if (player.IsDead()) RestartLevel();            // Ingen liv tilbage? Genstart leveled
         }
+       
     }
 
     // ---------- Genstart det nuværende level efter døden (private = kun brugt inde i Context) ----------

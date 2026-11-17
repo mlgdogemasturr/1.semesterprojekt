@@ -1,4 +1,5 @@
 namespace trash;
+
 class Space : Node   // Space arver fra Node, så et rum kan forbindes med andre rum
 {
     private Monster? monster;   // Rummets monster (kan være null = intet monster)

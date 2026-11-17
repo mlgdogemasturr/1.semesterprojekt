@@ -1,4 +1,5 @@
 namespace trash; 
+
 class Monster
 {
     private string name;                                        // Monsterets navn
@@ -31,12 +32,17 @@ class Monster
     public void PrintParts()
     {
         for (int i = 0; i < parts.Count; i++)
+        {
             Console.WriteLine($" {i + 1}. {parts[i]}");   // i+1, så listen starter ved 1
+        }
     }
 
     // Gør alle dele levende igen (genstart af level)
     public void Reset()
     {
-        foreach (MonsterPart part in parts) part.Reset();   // Gennemløb hver del og nulstil den
+        foreach (MonsterPart part in parts)
+        {
+            part.Reset();   // Gennemløb hver del og nulstil den
+        }
     }
 }

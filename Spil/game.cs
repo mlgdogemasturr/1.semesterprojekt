@@ -1,5 +1,4 @@
-﻿/* Main class for launching the game
- */
+﻿/* Main class for launching the game */
 using trash;
 
 class Game {
@@ -18,35 +17,36 @@ class Game {
 
     context.GetInventory().PrintInventory();         // Vis inventory til start
     
-    while (context.IsDone()==false) {
+    while (!context.IsDone()) {
       Console.Write("\n> ");
       string? line = Console.ReadLine();
       if (line==null) continue;
       
       // parse line
-      string[] elements = line.Split(" ");
-      string command = elements[0];
+      string[] elements = line.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+      string command = (elements.Count() > 0) ? elements[0] : "";
       string[] parameters = GetParameters(elements);
       
       switch (command) {
         case "afslut":
         case "farvel":
-        Console.WriteLine("\nSpillet er ovre! Vi håber du vil spille videre en anden gang.");
-        Console.WriteLine($"Du endte med {player.GetDeathCounter()} antal døde. ");
-          context.MakeDone();
-          break;
+            Console.WriteLine("\nSpillet er ovre! Vi håber du vil spille videre en anden gang.");
+            Console.WriteLine($"Du endte med {player.GetDeathCounter()} antal døde. ");
+            context.MakeDone();
+            break;
       
         case "gå":
-          if (parameters.Length != 1) {
-            Console.WriteLine("\nJeg ved ikke hvor det er 🤔"); 
-            break;                                   // ÆNDRET: var "return;"
+            if (parameters.Length != 2) 
+            {
+                Console.WriteLine("\nJeg ved ikke hvor det er 🤔"); 
+                break;                                   // ÆNDRET: var "return;"
             }
-          context.Transition(parameters[0]);
-          break;
+            context.Transition($"{parameters[0]} {parameters[1]}");
+                break;
       
         case "samleOp":                               // NY
           context.PickUp();
-          //context.GetCurrent.ShowExits(); - Node.GetEdges.ShowExits();
+          context.GetCurrent().ShowExits();
           break;
       
         case "angrib":                               // NY
@@ -59,8 +59,8 @@ class Game {
       
         case "hjælp":
           Console.WriteLine(" - afslut/farvel   Forlad programmet");
-          Console.WriteLine(" - gå              Follow an exit");
-          Console.WriteLine(" - samleOp         Pick up the item in the room");        // NY
+          Console.WriteLine(" - gå              Følg en udgang");
+          Console.WriteLine(" - samleOp         Saml genstanden op");        // NY
           Console.WriteLine(" - angrib          angrib <monsterdel-nr> <våben-nr>");        // NY
           Console.WriteLine(" - inventar        Vis dine våben");                   // NY
           Console.WriteLine(" - hjælp           Afspil en hjælpebesked");
@@ -73,11 +73,18 @@ class Game {
     }
   }
   
-  private static string[] GetParameters (string[] input) {
-    string[] output = new string[input.Length-1];
-    for (int i=0 ; i<output.Length ; i++) {
-      output[i] = input[i+1];
+    private static string[] GetParameters (string[] input) 
+    {
+        if (input.Count() == 0)
+        {
+            return new string[0];
+        }
+        string[] output = new string[input.Length-1];
+    
+        for (int i=0 ; i<output.Length ; i++) 
+        {
+            output[i] = input[i+1];
+        }
+        return output;
     }
-    return output;
-  }
 }

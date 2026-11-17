@@ -1,4 +1,5 @@
 namespace trash;
+
 class Player
 {
     private const byte MaxHealth = 3;            // const = fast værdi, kan ikke ændres. Max liv
