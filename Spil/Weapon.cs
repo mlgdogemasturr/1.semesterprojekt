@@ -1,3 +1,4 @@
+namespace trash;
 class Weapon : Item
 {
     private string material;
@@ -24,5 +25,5 @@ class Weapon : Item
     }
     
     // Læsbar tekst, når våbnet printes
-    public override string ToString() { return $"{name} ({material})"; }
+    public override string ToString() { return $"{name}"; }
 }

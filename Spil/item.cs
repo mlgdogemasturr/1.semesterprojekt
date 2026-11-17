@@ -1,3 +1,4 @@
+namespace trash;
 abstract class Item                       // Fælles skabelon for ting man kan samle op
 {
     protected string name;

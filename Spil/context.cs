@@ -1,10 +1,12 @@
+namespace trash;
+using trash;
 class Context
 {
     // ---------- Felter: det Context husker under hele spillet ----------
     Space current;                              // Det rum spilleren står i lige nu
     Player player = new Player();               // Spilleren (liv og dødstæller). Oprettes med det samme
     Inventory inventory = new Inventory();      // Spillerens våben. Oprettes tomt
-    bool done = false;                          // false = spillet kører. true = spillet er slut
+    private bool done = false;                          // false = spillet kører. true = spillet er slut
 
     // ---------- Constructor: kaldes én gang, når spillet starter (new Context(...)) ----------
     public Context(Space node)                                // node = startrummet, som Game sender ind
@@ -23,17 +25,17 @@ class Context
         Space? next = current.FollowEdge(direction);   // Slå retningen op. Giver null, hvis den ikke findes
         if (next == null)                              // Findes udgangen ikke?
         {
-            Console.WriteLine("Du går i ring og leder efter '" + direction + "' 😩");
+            Console.WriteLine("\nDu går i ring og leder efter '" + direction + "' 😩");
             return;                                    // return = stop metoden her, intet mere sker
         }
         if (current.HasLivingMonster())                // Regel 1: monsteret skal være besejret
         {
-            Console.WriteLine("Monsteret blokerer vejen! Besejr det først.");
+            Console.WriteLine("\nMonsteret blokerer vejen! Besejr det først.");
             return;
         }
         if (current.HasAvailableLoot())                // Regel 2: tingene skal samles op først
         {
-            Console.WriteLine("Du skal samle tingene op, før du går videre ('samle op').");
+            Console.WriteLine("\nDu skal samle tingene op, før du går videre ('samle op').");
             return;
         }
         // Når vi når hertil, er begge regler overholdt, så vi må gå videre
@@ -54,7 +56,6 @@ class Context
         foreach (Item item in items)             // Gennemgå hver ting i listen, én ad gangen
             item.PickUp(player, inventory);      // Hver ting ved selv, hvad der skal ske (våben → inventory, liv → +1 HP)
 
-        Console.WriteLine("\nDit inventory:");
         inventory.PrintInventory();              // Vis spillerens våben efter opsamling
         Console.WriteLine("\nDu kan nu gå videre.");
     }
@@ -77,7 +78,7 @@ class Context
             || !int.TryParse(parameters[0], out int partNo)
             || !int.TryParse(parameters[1], out int weaponNo))
         {
-            Console.WriteLine("\nBrug: angrib <del-nr> <våben-nr>");
+            Console.WriteLine("\nBrug: angrib <monsterdel-nr> <våben-nr>");
             return;
         }
 
@@ -96,7 +97,19 @@ class Context
                 Console.WriteLine("\nMonster besejret! Godt arbejde.");
                 if (current.IsFinal())                      // Er det sidste rum? Så er spillet vundet
                 {
-                    Console.WriteLine("\nDu har sorteret skraldets verden. Du har vundet! 🎉");
+                    Console.WriteLine("\nSpillet er færdigt, du har vundet!🎉 Tak fordi du har håndteret al affaldet!😊");
+                    Console.WriteLine($"Du endte med {player.GetDeathCounter()} antal døde. ");
+                    if (player.GetDeathCounter() < 6)
+                    {
+                        Console.WriteLine("Godt arbejde!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Bedre held næste gang!");
+                    }
+                    
+                    Console.WriteLine("\nVi håber du har lært noget, og vil gøre en daglig indsats for at sortere dit affald rigtigt 💪");
+                    
                     done = true;                            // Game's løkke stopper, når IsDone() giver true
                 }
                 else

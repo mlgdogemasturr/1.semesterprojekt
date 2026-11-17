@@ -1,5 +1,6 @@
 ﻿/* Main class for launching the game
  */
+using trash;
 
 class Game {
   static World world = new World();
@@ -7,13 +8,18 @@ class Game {
   static Context context = new Context(world.GetEntry());
   
   static void Main (string[] args) {
-      Console.WriteLine("Velkommen til skraldets verden!");
-      Console.WriteLine("Sortér monstrene med de rigtige våben. Skriv 'hjælp' for kommandoer.");
+      
+      Console.WriteLine("Du tager afsted på en vigtig mission! Skraldemonstrenes grotte skal tømmes, og kun du kan gøre det.");
+      Console.WriteLine("Menneskeheden har negliceret affaldssorteringen, og nu er affaldet begyndt at vågne op af ren hævntørst!");
+      Console.WriteLine("Inde i grotten åbner jorden sig under dig - en fælde! Du falder og falder og falder... Nu er der kun en vej ud: igennem!");
+      Console.WriteLine("SORTÉR MONSTRENE MED DE RIGTIGE VÅBEN. SKRIV 'hjælp' FOR KOMMANDOER");
     
     context.GetCurrent().Welcome();
+
+    context.GetInventory().PrintInventory();         // Vis inventory til start
     
     while (context.IsDone()==false) {
-      Console.Write("> ");
+      Console.Write("\n> ");
       string? line = Console.ReadLine();
       if (line==null) continue;
       
@@ -23,49 +29,48 @@ class Game {
       string[] parameters = GetParameters(elements);
       
       switch (command) {
-        case "exit":
-        case "quit":
-        case "bye":
+        case "afslut":
+        case "farvel":
+        Console.WriteLine("\nSpillet er ovre! Vi håber du vil spille videre en anden gang.");
+        Console.WriteLine($"Du endte med {player.GetDeathCounter()} antal døde. ");
           context.MakeDone();
           break;
       
         case "gå":
           if (parameters.Length != 1) {
-            Console.WriteLine("\nI don't seem to know where that is 🤔");
+            Console.WriteLine("\nJeg ved ikke hvor det er 🤔"); 
             break;                                   // ÆNDRET: var "return;"
-          }
+            }
           context.Transition(parameters[0]);
           break;
       
         case "samleOp":                               // NY
           context.PickUp();
+          //context.GetCurrent.ShowExits(); - Node.GetEdges.ShowExits();
           break;
       
         case "angrib":                               // NY
           context.Attack(parameters);
           break;
       
-        case "inventory":                            // NY
+        case "inventar":                            // NY
           context.GetInventory().PrintInventory();
           break;
       
         case "hjælp":
-          Console.WriteLine(" - exit       Exit the program");
-          Console.WriteLine(" - quit       Exit the program");
-          Console.WriteLine(" - bye        Exit the program");
-          Console.WriteLine(" - gå         Follow an exit");
-          Console.WriteLine(" - samle op   Pick up the item in the room");        // NY
-          Console.WriteLine(" - angrib     attack <part-nr> <weapon-nr>");        // NY
-          Console.WriteLine(" - inventory  Show your weapons");                   // NY
-          Console.WriteLine(" - hjælp      Display a help message");
+          Console.WriteLine(" - afslut/farvel   Forlad programmet");
+          Console.WriteLine(" - gå              Follow an exit");
+          Console.WriteLine(" - samleOp         Pick up the item in the room");        // NY
+          Console.WriteLine(" - angrib          angrib <monsterdel-nr> <våben-nr>");        // NY
+          Console.WriteLine(" - inventar        Vis dine våben");                   // NY
+          Console.WriteLine(" - hjælp           Afspil en hjælpebesked");
           break;
       
         default:
-          Console.WriteLine("\nWoopsie, I don't understand '"+command+"' 😕");
+          Console.WriteLine("\nUpsi, jeg forstår ikke '"+command+"' 😕");
           break;
       }
     }
-    Console.WriteLine("\nGame Over 😥");
   }
   
   private static string[] GetParameters (string[] input) {
