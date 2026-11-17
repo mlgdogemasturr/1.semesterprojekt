@@ -67,12 +67,13 @@ class Space : Node   // Space arver fra Node, så et rum kan forbindes med andre
             */
         }
     }    
-    
+
+    /*
     public static void PleaseShowExits()
     {
         ShowExits(); //????
     }
-
+    */
 
 
     public void Goodbye() { }   // Plads til noget, der skal ske, når man forlader rummet

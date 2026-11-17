@@ -16,6 +16,7 @@ class Inventory
     public void PrintInventory()
     {
         if (weapons.Count == 0) { Console.WriteLine(" (tomt)"); return; }   // Hvis tomt: skriv det og stop
+        Console.WriteLine("\nDit inventar:");
         for (int i = 0; i < weapons.Count; i++)
             Console.WriteLine($" {i + 1}. {weapons[i]}");
     }

@@ -1,6 +1,6 @@
 ﻿/* Main class for launching the game
  */
- using trash;
+using trash;
 
 class Game {
   static World world = new World();
@@ -8,15 +8,18 @@ class Game {
   static Context context = new Context(world.GetEntry());
   
   static void Main (string[] args) {
-      Console.WriteLine("Velkommen til skraldets verden!");
-      Console.WriteLine("Sortér monstrene med de rigtige våben. Skriv 'hjælp' for kommandoer.");
+      
+      Console.WriteLine("Du tager afsted på en vigtig mission! Skraldemonstrenes grotte skal tømmes, og kun du kan gøre det.");
+      Console.WriteLine("Menneskeheden har negliceret affaldssorteringen, og nu er affaldet begyndt at vågne op af ren hævntørst!");
+      Console.WriteLine("Inde i grotten åbner jorden sig under dig - en fælde! Du falder og falder og falder... Nu er der kun en vej ud: igennem!");
+      Console.WriteLine("SORTÉR MONSTRENE MED DE RIGTIGE VÅBEN. SKRIV 'hjælp' FOR KOMMANDOER");
     
     context.GetCurrent().Welcome();
 
-    //inventory.PrintInventory();         // Vis inventory til start
+    context.GetInventory().PrintInventory();         // Vis inventory til start
     
     while (context.IsDone()==false) {
-      Console.Write("> ");
+      Console.Write("\n> ");
       string? line = Console.ReadLine();
       if (line==null) continue;
       
@@ -43,6 +46,7 @@ class Game {
       
         case "samleOp":                               // NY
           context.PickUp();
+          //context.GetCurrent.ShowExits(); - Node.GetEdges.ShowExits();
           break;
       
         case "angrib":                               // NY

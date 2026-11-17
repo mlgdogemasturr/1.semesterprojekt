@@ -56,10 +56,8 @@ class Context
         foreach (Item item in items)             // Gennemgå hver ting i listen, én ad gangen
             item.PickUp(player, inventory);      // Hver ting ved selv, hvad der skal ske (våben → inventory, liv → +1 HP)
 
-        Console.WriteLine("\nDit inventory:");
         inventory.PrintInventory();              // Vis spillerens våben efter opsamling
         Console.WriteLine("\nDu kan nu gå videre.");
-        PleaseShowExits();
     }
 
     // ---------- Angrib ("attack 1 2" = del nr. 1 med våben nr. 2) ----------

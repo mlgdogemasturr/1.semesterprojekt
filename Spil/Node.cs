@@ -4,6 +4,11 @@ class Node
     public string name;   // NU PUBLIC? protected: synligt i Node og klasser, der arver fra Node (fx Space)
     public Dictionary<string, Node> edges = new Dictionary<string, Node>();  // Retning → næste rum
 
+    public Dictionary<string, Node> GetEdges()
+    {
+        return edges;
+    }
+    
     public Node(string name) { this.name = name; }
 
     public String GetName() { return name; }

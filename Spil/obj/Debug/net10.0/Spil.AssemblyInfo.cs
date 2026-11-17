@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Spil")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20730f167a059f28e3da8e5d0ee6bcb734e3435b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f000443a518888f37d382d1c5505ee1f18736d82")]
 [assembly: System.Reflection.AssemblyProductAttribute("Spil")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Spil")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
