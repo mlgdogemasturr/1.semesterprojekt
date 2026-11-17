@@ -1,10 +1,10 @@
-Lav liste med alle monstre 
+/*Lav liste med alle monstre 
 Construct alle weapons
 PlayerSpawn
 
 Velkommen til skraldets verden!
 
-Du er nå på level 0. 
+Du er nu på level 0. 
 Du ser en genstand på jorden. Vil du samle den op? (ja/nej)
 Nej: ”Er du sikker?”
 Ja: (Våben) tilføjet til inventory. 
@@ -58,3 +58,4 @@ Attack (checker om weaponmaterial==monsterpartmaterial)
             print Healthpoints
             break/continue...?
         }
+*/
