@@ -31,7 +31,7 @@ class Game {
       
         case "gå":
           if (parameters.Length != 1) {
-            Console.WriteLine("I don't seem to know where that is 🤔");
+            Console.WriteLine("\nI don't seem to know where that is 🤔");
             break;                                   // ÆNDRET: var "return;"
           }
           context.Transition(parameters[0]);
@@ -61,11 +61,11 @@ class Game {
           break;
       
         default:
-          Console.WriteLine("Woopsie, I don't understand '"+command+"' 😕");
+          Console.WriteLine("\nWoopsie, I don't understand '"+command+"' 😕");
           break;
       }
     }
-    Console.WriteLine("Game Over 😥");
+    Console.WriteLine("\nGame Over 😥");
   }
   
   private static string[] GetParameters (string[] input) {

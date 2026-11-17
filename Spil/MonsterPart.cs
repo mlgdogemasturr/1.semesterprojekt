@@ -23,7 +23,7 @@ class MonsterPart
         if (!isDefeated && weapon.HasMaterial(materialType))
         {
             isDefeated = true;                                      // Markér delen som besejret
-            Console.WriteLine($"{name} er blevet besejret!");       // $"..." indsætter variablen {name} i teksten
+            Console.WriteLine($"\n{name} er blevet besejret!");       // $"..." indsætter variablen {name} i teksten
             return true;                                            // Fortæl kalderen, at det lykkedes
         }
         return false;   // Forkert materiale eller allerede besejret

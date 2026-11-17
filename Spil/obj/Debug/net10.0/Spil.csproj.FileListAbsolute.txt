@@ -3,6 +3,7 @@ C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\Spil.AssemblyInf
 C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\Spil.AssemblyInfo.cs
 C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\Spil.csproj.CoreCompileInputs.cache
 C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\Spil.sourcelink.json
+<<<<<<< HEAD
 C:\Users\steve\Desktop\1.semesterprojekt\Spil\bin\Debug\net10.0\Spil.exe
 C:\Users\steve\Desktop\1.semesterprojekt\Spil\bin\Debug\net10.0\Spil.deps.json
 C:\Users\steve\Desktop\1.semesterprojekt\Spil\bin\Debug\net10.0\Spil.runtimeconfig.json
@@ -13,3 +14,20 @@ C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\refint\Spil.dll
 C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\Spil.pdb
 C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\Spil.genruntimeconfig.cache
 C:\Users\steve\Desktop\1.semesterprojekt\Spil\obj\Debug\net10.0\ref\Spil.dll
+=======
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\bin\Debug\net10.0\Spil.exe
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\bin\Debug\net10.0\Spil.deps.json
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\bin\Debug\net10.0\Spil.runtimeconfig.json
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\bin\Debug\net10.0\Spil.dll
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\bin\Debug\net10.0\Spil.pdb
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\obj\Debug\net10.0\Spil.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\obj\Debug\net10.0\Spil.AssemblyInfoInputs.cache
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\obj\Debug\net10.0\Spil.AssemblyInfo.cs
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\obj\Debug\net10.0\Spil.csproj.CoreCompileInputs.cache
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\obj\Debug\net10.0\Spil.sourcelink.json
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\obj\Debug\net10.0\Spil.dll
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\obj\Debug\net10.0\refint\Spil.dll
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\obj\Debug\net10.0\Spil.pdb
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\obj\Debug\net10.0\Spil.genruntimeconfig.cache
+C:\Users\jeppe\UNICoding\Semesterprojekter\1.semesterprojekt\spil\obj\Debug\net10.0\ref\Spil.dll
+>>>>>>> 20730f167a059f28e3da8e5d0ee6bcb734e3435b

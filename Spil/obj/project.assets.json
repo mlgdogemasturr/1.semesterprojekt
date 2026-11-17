@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\steve\\.nuget\\packages\\": {}
+    "C:\\Users\\jeppe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\steve\\Desktop\\1.semesterprojekt\\Spil\\Spil.csproj",
+      "projectUniqueName": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\Spil.csproj",
       "projectName": "Spil",
-      "projectPath": "C:\\Users\\steve\\Desktop\\1.semesterprojekt\\Spil\\Spil.csproj",
-      "packagesPath": "C:\\Users\\steve\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\steve\\Desktop\\1.semesterprojekt\\Spil\\obj\\",
+      "projectPath": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\Spil.csproj",
+      "packagesPath": "C:\\Users\\jeppe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\steve\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\jeppe\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

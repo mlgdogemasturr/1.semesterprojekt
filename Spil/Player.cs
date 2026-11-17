@@ -26,6 +26,6 @@ class Player
     public void PickUpHP()
     {
         if (healthPoints < MaxHealth) healthPoints++;
-        else Console.WriteLine("Du har ikke mistet et liv. Godt arbejde!");
+        else Console.WriteLine("\nDu har ikke mistet et liv. Godt arbejde!");
     }
 }
