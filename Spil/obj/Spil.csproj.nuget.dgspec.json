@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\Spil\\Spil.csproj": {}
+    "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\Spil.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\Spil\\Spil.csproj": {
+    "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\Spil.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\Spil\\Spil.csproj",
+        "projectUniqueName": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\Spil.csproj",
         "projectName": "Spil",
-        "projectPath": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\Spil\\Spil.csproj",
+        "projectPath": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\Spil.csproj",
         "packagesPath": "C:\\Users\\jeppe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\Spil\\obj\\",
+        "outputPath": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jeppe\\AppData\\Roaming\\NuGet\\NuGet.Config"
