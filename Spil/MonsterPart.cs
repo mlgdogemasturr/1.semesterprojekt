@@ -35,13 +35,13 @@ class MonsterPart
             return true;                                            // Fortæl kalderen, at det lykkedes
             
         }
-        return false;   // Forkert materiale eller allerede besejret
+        return false;   // Forkert materiale eller allerede klaret
     }
 
     // Overskriver ToString, så Console.WriteLine(part) skriver noget læsbart
     public override string ToString()
     {
-        // ? : er en kort if/else: tilføj " [besejret]" kun hvis isDefeated er true
-        return $"{name}" + (isDefeated ? " [besejret]" : "");
+        // ? : er en kort if/else: tilføj " [klaret]" kun hvis isDefeated er true
+        return $"{name}" + (isDefeated ? " [klaret]" : "");
     }
 }

@@ -18,7 +18,7 @@ class Space : Node   // Space arver fra Node, så et rum kan forbindes med andre
         return monster != null && !monster.IsDefeated();   // && stopper tidligt, hvis monster er null
     }
 
-    // Loot er kun tilgængeligt, når monsteret er besejret, og der ligger noget
+    // Loot er kun tilgængeligt, når monsteret er klaret, og der ligger noget
     public bool HasAvailableLoot()
     {
         return !HasLivingMonster() && loot.Count > 0;

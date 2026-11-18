@@ -15,7 +15,7 @@ class Monster
     // Tilføjer en del til monsteret (bruges i World.cs, når monsteret bygges)
     public void AddMonsterPart(MonsterPart part) { parts.Add(part); }
 
-    // Monsteret er besejret, når ALLE dele er besejret
+    // Monsteret er klaret, når ALLE dele er klaret
     public bool IsDefeated()
     {
         return parts.All(p => p.IsDefeated());   // All(...) giver true, hvis betingelsen gælder for hver del

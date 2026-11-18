@@ -28,9 +28,9 @@ class Context
             Console.WriteLine("\nDu går i ring og leder efter '" + direction + "' 😩");
             return;                                    // return = stop metoden her, intet mere sker
         }
-        if (current.HasLivingMonster())                // Regel 1: monsteret skal være besejret
+        if (current.HasLivingMonster())                // Regel 1: monsteret skal gøres af med
         {
-            Console.WriteLine("\nMonsteret blokerer vejen! Besejr det først.");
+            Console.WriteLine("\nVejen er blokeret! Gør det af med monsteret først.");
             return;
         }
         if (current.HasAvailableLoot())                // Regel 2: tingene skal samles op først
@@ -92,11 +92,11 @@ class Context
         
         bool defeated = weapon.Attack(part);
         monster.PrintParts();
-        if (defeated)                            // Rigtigt materiale? (true = delen er besejret)
+        if (defeated)                            // Rigtigt materiale? (true = delen er gjort af med)
         {
             if (monster.IsDefeated())                       // Var det den sidste del på monsteret?
             {
-                Console.WriteLine("\nMonster besejret! Godt arbejde.");
+                Console.WriteLine("\nMonster fjernet! Godt arbejde.");
                 if (current.IsFinal())                      // Er det sidste rum? Så er spillet vundet
                 {
                     Console.WriteLine("\nSpillet er færdigt, du har vundet!🎉 Tak fordi du har håndteret al affaldet!😊");
