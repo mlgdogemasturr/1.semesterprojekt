@@ -1,4 +1,5 @@
 namespace trash;
+
 class Weapon : Item
 {
     private string material;

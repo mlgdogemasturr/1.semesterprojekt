@@ -1,4 +1,5 @@
 namespace trash;
+
 class MonsterPart
 {
     private string name;          // Delens navn, fx "Låg"
@@ -16,24 +17,31 @@ class MonsterPart
     public string GetName() { return name; }           // Getter: lader andre klasser læse navnet
     public bool IsDefeated() { return isDefeated; }    // Getter: er delen besejret?
     public void Reset() { isDefeated = false; }        // Gør delen "levende" igen (bruges ved genstart af level)
-
+    
     // Forsøger at besejre delen med et våben. Returnerer true hvis det lykkedes
     public bool Defeat(Weapon weapon)
-    {
+    {   
+        if (isDefeated == true)
+        {
+            Console.WriteLine("Denne del er allerede besejret!");
+            return true;
+        }
         // Kun hvis delen ikke allerede er besejret OG våbnet har det rigtige materiale
         if (!isDefeated && weapon.HasMaterial(materialType))
         {
             isDefeated = true;                                      // Markér delen som besejret
             Console.WriteLine($"\n{name} er blevet besejret!");       // $"..." indsætter variablen {name} i teksten
+            //PrintParts();
             return true;                                            // Fortæl kalderen, at det lykkedes
+            
         }
-        return false;   // Forkert materiale eller allerede besejret
+        return false;   // Forkert materiale eller allerede klaret
     }
 
     // Overskriver ToString, så Console.WriteLine(part) skriver noget læsbart
     public override string ToString()
     {
-        // ? : er en kort if/else: tilføj " [besejret]" kun hvis isDefeated er true
-        return $"{name}" + (isDefeated ? " [besejret]" : "");
+        // ? : er en kort if/else: tilføj " [klaret]" kun hvis isDefeated er true
+        return $"{name}" + (isDefeated ? " [klaret]" : "");
     }
 }

@@ -1,5 +1,4 @@
-/* World class for modeling the entire in-game world
- */
+/* World class for modeling the entire in-game world */
 namespace trash;
 
 class World
@@ -17,71 +16,84 @@ class World
         Space level6 = new Space("Level 6");
         Space level7 = new Space("Level 7");
         Space level8 = new Space("Level 8");
+        Space level9 = new Space("Level 9");
 
-        // ---------- Level 1: Metalmonster -> Glass Cannon ----------
-        Monster metalMonster = new Monster("Metalmonsteret");
+        // ---------- Level 1: KonservesMonsteret -> Glass Cannon ----------
+        Monster metalMonster = new Monster("KonservesMonsteret");
         metalMonster.AddMonsterPart(new MonsterPart("Krop", "metal"));
         level1.SetMonster(metalMonster);
         level1.AddLoot(new Weapon("Glas Kanon", "glas"));
 
-        // ---------- Level 2: Glasmonster -> madaffaldsvåben ----------
-        Monster glasMonster = new Monster("Glasmonsteret");
-        glasMonster.AddMonsterPart(new MonsterPart("Krop", "glas"));
+        // ---------- Level 2: DrikkeUheldet (glas + glas + glas) -> madaffaldsvåben ----------
+        Monster glasMonster = new Monster("DrikkeUheldet");
+        glasMonster.AddMonsterPart(new MonsterPart("Stort glasskår", "glas"));
+        glasMonster.AddMonsterPart(new MonsterPart("Lille glasskår", "glas"));
+        glasMonster.AddMonsterPart(new MonsterPart("Mini  glasskår", "glas"));
         level2.SetMonster(glasMonster);
         level2.AddLoot(new Weapon("Madgaffel", "mad"));
 
         // ---------- Level 3: Cocio (glas + metal) -> restaffaldsvåben ----------
-        Monster cocio = new Monster("Cocio");
+        Monster cocio = new Monster("CocioBæstet");
         cocio.AddMonsterPart(new MonsterPart("Låg", "metal"));
         cocio.AddMonsterPart(new MonsterPart("Flaske", "glas"));
         level3.SetMonster(cocio);
         level3.AddLoot(new Weapon("Restaffaldsøkse", "rest"));
 
-        // ---------- Level 4: Banana King (mad) -> Papsværd ----------
-        Monster bananaKing = new Monster("Banankongen");
-        bananaKing.AddMonsterPart(new MonsterPart("Skræl", "mad"));
+        // ---------- Level 4: BananKongen (mad) -> Papsværd ----------
+        Monster bananaKing = new Monster("BananKongen");
+        bananaKing.AddMonsterPart(new MonsterPart("Bananskræl", "mad"));
         level4.SetMonster(bananaKing);
         level4.AddLoot(new Weapon("Papsværdet", "pap"));
 
         // ---------- Level 5: Pizzabakke (rest + mad + metal) -> +1 liv ----------
-        Monster pizza = new Monster("Hangoverudyret");
+        Monster pizza = new Monster("HangoverUdyret");
         pizza.AddMonsterPart(new MonsterPart("Pizzabakke", "rest"));
         pizza.AddMonsterPart(new MonsterPart("Skorperester", "mad"));
-        pizza.AddMonsterPart(new MonsterPart("Tom dåse", "metal"));
+        pizza.AddMonsterPart(new MonsterPart("Tom dåse fra Tyskland", "metal"));
         level5.SetMonster(pizza);
         level5.AddLoot(new HealthPickup());          // Belønning er et ekstra liv i stedet for et våben
 
         // ---------- Level 6: Avocadobakke (pap + mad) -> PlastMaSværd ----------
-        Monster avocado = new Monster("Avocadobakke-monsteret");
-        avocado.AddMonsterPart(new MonsterPart("Bakke", "pap"));
-        avocado.AddMonsterPart(new MonsterPart("Avocado", "mad"));
+        Monster avocado = new Monster("AvocadoRidderen");
+        avocado.AddMonsterPart(new MonsterPart("Rustning: Bakke", "pap"));
+        avocado.AddMonsterPart(new MonsterPart("Krop: Avocadoskrald", "mad"));
+        avocado.AddMonsterPart(new MonsterPart("Krop: Avocadosten", "mad"));
         level6.SetMonster(avocado);
         level6.AddLoot(new Weapon("PLASTmaSværdet", "plast"));
 
-        // ---------- Level 7: Smørbakke (pap + plast + rest) -> +1 liv ----------
-        Monster smør = new Monster("Smørbakke-monsteret");
+        // ---------- Level 7: MorgenmadsUlykken (mad + kartoner + glas) -> JuicebrikPistolen ----------
+        Monster morgenmad = new Monster("MorgenmadsUlykken"); //evt. gør det til Lurpak el. andet for at specificere 
+        morgenmad.AddMonsterPart(new MonsterPart("Havregrynsrester", "mad"));
+        morgenmad.AddMonsterPart(new MonsterPart("Mælkekarton", "kartoner"));
+        morgenmad.AddMonsterPart(new MonsterPart("Smadret glasskål", "glas"));
+        level7.SetMonster(morgenmad);
+        level7.AddLoot(new Weapon("JuicebrikPistolen", "kartoner"));
+        
+        // ---------- Level 8: Smørbakke (pap + plast + rest) -> +1 liv ----------
+        Monster smør = new Monster("SmørbakkeMonstromet"); //evt. gør det til Lurpak el. andet for at specificere 
         smør.AddMonsterPart(new MonsterPart("Bund", "pap"));
         smør.AddMonsterPart(new MonsterPart("Låg", "plast"));
         smør.AddMonsterPart(new MonsterPart("Resten af bakken", "rest"));
-        level7.SetMonster(smør);
-        level7.AddLoot(new HealthPickup());
+        level8.SetMonster(smør);
+        level8.AddLoot(new HealthPickup());
 
-        // ---------- Level 8: Julegave-monsteret (rest + pap + plast) -> spillet er vundet ----------
-        Monster gave = new Monster("Julegave-monsteret");
+        // ---------- Level 9: Julegave-monsteret (rest + pap + plast) -> spillet er vundet ----------
+        Monster gave = new Monster("Den Afskyelige Julegave");
         gave.AddMonsterPart(new MonsterPart("Gavepapir", "rest"));
-        gave.AddMonsterPart(new MonsterPart("Papkasse", "pap"));
-        gave.AddMonsterPart(new MonsterPart("Bobbelplast", "plast"));
-        level8.SetMonster(gave);
+        gave.AddMonsterPart(new MonsterPart("Skoæske", "pap"));
+        gave.AddMonsterPart(new MonsterPart("Boblefolie", "plast"));
+        level9.SetMonster(gave);
         // Ingen loot og ingen udgange: Space.IsFinal() er true, så Context afslutter spillet ved sejr
 
         // ---------- Forbind rummene i rækkefølge ----------
-        level1.AddEdge("gennem.dør", level2);
-        level2.AddEdge("under.vandfaldet", level3);
-        level3.AddEdge("gennem.hul", level4);
-        level4.AddEdge("op.af.mineskakten", level5);
-        level5.AddEdge("gennem.lem", level6);
-        level6.AddEdge("mod.nord", level7);
-        level7.AddEdge("mod.lyset", level8);
+        level1.AddEdge("gennem dør", level2);
+        level2.AddEdge("under vandfaldet", level3);
+        level3.AddEdge("gennem hul", level4);
+        level4.AddEdge("opad mineskakten", level5);
+        level5.AddEdge("gennem lem", level6);
+        level6.AddEdge("mod nord", level7);
+        level7.AddEdge("følg gennemtræk", level8);
+        level8.AddEdge("mod lyset", level9);
 
         this.entry = level1;   // Spilleren starter ved level 1
     }

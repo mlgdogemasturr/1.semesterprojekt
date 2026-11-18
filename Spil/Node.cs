@@ -1,4 +1,5 @@
 namespace trash;
+
 class Node
 {
     public string name;   // NU PUBLIC? protected: synligt i Node og klasser, der arver fra Node (fx Space)
@@ -25,8 +26,8 @@ class Node
 
     public void ShowExits()             //Skriver udgange-beskeden
     {
-    Console.WriteLine("\nUdgang:");
-    foreach (string exit in edges.Keys)       // edges.Keys = alle retninger ("door", "north" ...)
-        Console.WriteLine(" - " + exit);
+        Console.WriteLine("\nUdgang:");
+        foreach (string exit in edges.Keys)       // edges.Keys = alle retninger ("door", "north" ...)
+            Console.WriteLine(" - " + exit);
     }
 }
