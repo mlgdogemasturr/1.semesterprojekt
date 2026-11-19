@@ -42,7 +42,7 @@ class Space : Node   // Space arver fra Node, så et rum kan forbindes med andre
         Console.WriteLine("\nDu ser følgende på jorden:");
         foreach (Item item in loot)
         Console.WriteLine("\n - " + item.GetName());
-        Console.WriteLine("\nSkriv 'samleOp' for at samle det op.");
+        Console.WriteLine("\nSkriv 'saml op' for at samle det op.");
     }
     // Skrives, når spilleren træder ind i rummet
     public void Welcome()

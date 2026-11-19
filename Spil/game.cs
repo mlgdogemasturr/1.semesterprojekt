@@ -44,11 +44,19 @@ class Game {
             context.Transition($"{parameters[0]} {parameters[1]}");
                 break;
       
-        case "samleOp":                               // NY
-          context.PickUp();
-          context.GetCurrent().ShowExits();
+        case "saml":
+          if (parameters[0] == "op")
+          {
+            context.PickUp();
+            context.GetCurrent().ShowExits();
+            break;
+          }
+          else
+          {
+              Console.WriteLine($"Jeg forstår ikke {parameters[0]}");
+          }
           break;
-      
+          
         case "angrib":                               // NY
           context.Attack(parameters);
           break;
@@ -60,7 +68,7 @@ class Game {
         case "hjælp":
           Console.WriteLine(" - afslut/farvel   Forlad programmet");
           Console.WriteLine(" - gå              Følg en udgang");
-          Console.WriteLine(" - samleOp         Saml genstanden op");        // NY
+          Console.WriteLine(" - saml op         Saml genstanden op");        // NY
           Console.WriteLine(" - angrib          angrib <monsterdel-nr> <våben-nr>");        // NY
           Console.WriteLine(" - inventar        Vis dine våben");                   // NY
           Console.WriteLine(" - hjælp           Afspil en hjælpebesked");

@@ -20,7 +20,7 @@ class World
 
         // ---------- Level 1: KonservesMonsteret -> Glass Cannon ----------
         Monster metalMonster = new Monster("KonservesMonsteret");
-        metalMonster.AddMonsterPart(new MonsterPart("Krop", "metal"));
+        metalMonster.AddMonsterPart(new MonsterPart("Dåse", "metal"));
         level1.SetMonster(metalMonster);
         level1.AddLoot(new Weapon("GlasKanonen", "glas"));
 
@@ -55,9 +55,9 @@ class World
 
         // ---------- Level 6: Avocadobakke (pap + mad) -> PlastMaSværd ----------
         Monster avocado = new Monster("AvocadoRidderen");
-        avocado.AddMonsterPart(new MonsterPart("Rustning: Bakke", "pap"));
-        avocado.AddMonsterPart(new MonsterPart("Krop: Avocadoskrald", "mad"));
-        avocado.AddMonsterPart(new MonsterPart("Krop: Avocadosten", "mad"));
+        avocado.AddMonsterPart(new MonsterPart("Bakke", "pap"));
+        avocado.AddMonsterPart(new MonsterPart("Avocadoskrald", "mad"));
+        avocado.AddMonsterPart(new MonsterPart("Avocadosten", "mad"));
         level6.SetMonster(avocado);
         level6.AddLoot(new Weapon("JuicebrikPistolen", "kartoner"));
 
@@ -92,7 +92,7 @@ class World
         level4.AddEdge("opad mineskakten", level5);
         level5.AddEdge("gennem lem", level6);
         level6.AddEdge("mod nord", level7);
-        level7.AddEdge("med gennemtræk", level8);
+        level7.AddEdge("gennem tågen", level8);
         level8.AddEdge("mod lyset", level9);
 
         this.entry = level1;   // Spilleren starter ved level 1
