@@ -39,7 +39,6 @@ class Context
             return;
         }
         // Når vi når hertil, er begge regler overholdt, så vi må gå videre
-        current.Goodbye();     // Giv det gamle rum chancen for at "rydde op"
         current = next;        // Skift til det nye rum
         current.Welcome();     // Vis det nye rum for spilleren
     }
