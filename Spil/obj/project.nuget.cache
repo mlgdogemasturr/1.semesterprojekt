@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "PkUEpJE94e4=",
   "success": true,
   "projectFilePath": "C:\\Users\\steve\\Desktop\\1.semesterprojekt\\Spil\\Spil.csproj",
-=======
-  "dgSpecHash": "OGq9pvFBBSQ=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\Spil.csproj",
->>>>>>> 76660e4044913089cb0e4da448a8235c18ac3c3d
   "expectedPackageFiles": [],
   "logs": []
 }

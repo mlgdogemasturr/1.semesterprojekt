@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\steve\\Desktop\\1.semesterprojekt\\Spil\\Spil.csproj": {}
   },
   "projects": {
@@ -13,19 +12,6 @@
         "projectPath": "C:\\Users\\steve\\Desktop\\1.semesterprojekt\\Spil\\Spil.csproj",
         "packagesPath": "C:\\Users\\steve\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\steve\\Desktop\\1.semesterprojekt\\Spil\\obj\\",
-=======
-    "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\Spil.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\Spil.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\Spil.csproj",
-        "projectName": "Spil",
-        "projectPath": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\Spil.csproj",
-        "packagesPath": "C:\\Users\\jeppe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeppe\\UNICoding\\Semesterprojekter\\1.semesterprojekt\\spil\\obj\\",
->>>>>>> 76660e4044913089cb0e4da448a8235c18ac3c3d
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\steve\\AppData\\Roaming\\NuGet\\NuGet.Config"
