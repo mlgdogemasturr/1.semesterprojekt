@@ -77,8 +77,6 @@ class Space : Node   // Space arver fra Node, så et rum kan forbindes med andre
     */
 
 
-    public void Goodbye() { }   // Plads til noget, der skal ske, når man forlader rummet
-
     // Overskriver Node's metode, så den returnerer et Space i stedet for en Node
     public override Space? FollowEdge(string direction)
     {

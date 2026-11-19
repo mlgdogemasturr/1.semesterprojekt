@@ -59,7 +59,7 @@ class World
         avocado.AddMonsterPart(new MonsterPart("Krop: Avocadoskrald", "mad"));
         avocado.AddMonsterPart(new MonsterPart("Krop: Avocadosten", "mad"));
         level6.SetMonster(avocado);
-        level6.AddLoot(new Weapon("PLASTmaSværdet", "plast"));
+        level6.AddLoot(new Weapon("JuicebrikPistolen", "kartoner"));
 
         // ---------- Level 7: MorgenmadsUlykken (mad + kartoner + glas) -> JuicebrikPistolen ----------
         Monster morgenmad = new Monster("MorgenmadsUlykken"); //evt. gør det til Lurpak el. andet for at specificere 
@@ -67,7 +67,7 @@ class World
         morgenmad.AddMonsterPart(new MonsterPart("Mælkekarton", "kartoner"));
         morgenmad.AddMonsterPart(new MonsterPart("Smadret glasskål", "glas"));
         level7.SetMonster(morgenmad);
-        level7.AddLoot(new Weapon("JuicebrikPistolen", "kartoner"));
+        level7.AddLoot(new Weapon("PLASTmaSværdet", "plast"));
         
         // ---------- Level 8: Smørbakke (pap + plast + rest) -> +1 liv ----------
         Monster smør = new Monster("SmørbakkeMonstromet"); //evt. gør det til Lurpak el. andet for at specificere 
