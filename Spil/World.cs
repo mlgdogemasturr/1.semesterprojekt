@@ -22,7 +22,7 @@ class World
         Monster metalMonster = new Monster("KonservesMonsteret");
         metalMonster.AddMonsterPart(new MonsterPart("Krop", "metal"));
         level1.SetMonster(metalMonster);
-        level1.AddLoot(new Weapon("Glas Kanon", "glas"));
+        level1.AddLoot(new Weapon("GlasKanonen", "glas"));
 
         // ---------- Level 2: DrikkeUheldet (glas + glas + glas) -> madaffaldsvåben ----------
         Monster glasMonster = new Monster("DrikkeUheldet");
@@ -30,14 +30,14 @@ class World
         glasMonster.AddMonsterPart(new MonsterPart("Lille glasskår", "glas"));
         glasMonster.AddMonsterPart(new MonsterPart("Mini  glasskår", "glas"));
         level2.SetMonster(glasMonster);
-        level2.AddLoot(new Weapon("Madgaffel", "mad"));
+        level2.AddLoot(new Weapon("Madgaflen", "mad"));
 
         // ---------- Level 3: Cocio (glas + metal) -> restaffaldsvåben ----------
         Monster cocio = new Monster("CocioBæstet");
         cocio.AddMonsterPart(new MonsterPart("Låg", "metal"));
         cocio.AddMonsterPart(new MonsterPart("Flaske", "glas"));
         level3.SetMonster(cocio);
-        level3.AddLoot(new Weapon("Restaffaldsøkse", "rest"));
+        level3.AddLoot(new Weapon("Restaffaldsøksen", "rest"));
 
         // ---------- Level 4: BananKongen (mad) -> Papsværd ----------
         Monster bananaKing = new Monster("BananKongen");
@@ -70,10 +70,10 @@ class World
         level7.AddLoot(new Weapon("PLASTmaSværdet", "plast"));
         
         // ---------- Level 8: Smørbakke (pap + plast + rest) -> +1 liv ----------
-        Monster smør = new Monster("SmørbakkeMonstromet"); //evt. gør det til Lurpak el. andet for at specificere 
+        Monster smør = new Monster("KærgårdenMonstromet"); //evt. gør det til Lurpak el. andet for at specificere 
         smør.AddMonsterPart(new MonsterPart("Bund", "pap"));
         smør.AddMonsterPart(new MonsterPart("Låg", "plast"));
-        smør.AddMonsterPart(new MonsterPart("Resten af bakken", "rest"));
+        smør.AddMonsterPart(new MonsterPart("Resten af bakken", "plast"));
         level8.SetMonster(smør);
         level8.AddLoot(new HealthPickup());
 
@@ -92,7 +92,7 @@ class World
         level4.AddEdge("opad mineskakten", level5);
         level5.AddEdge("gennem lem", level6);
         level6.AddEdge("mod nord", level7);
-        level7.AddEdge("følg gennemtræk", level8);
+        level7.AddEdge("med gennemtræk", level8);
         level8.AddEdge("mod lyset", level9);
 
         this.entry = level1;   // Spilleren starter ved level 1
