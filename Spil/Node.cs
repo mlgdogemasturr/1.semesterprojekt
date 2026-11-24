@@ -31,6 +31,5 @@ class Node
         {    
             Console.WriteLine(" - " + exit);
         }
-        Console.WriteLine("\nGå videre med: gå <udgang>");
     }
 }

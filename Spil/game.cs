@@ -12,6 +12,8 @@ class Game {
       Console.WriteLine("Menneskeheden har negliceret affaldssorteringen, og nu er affaldet begyndt at vågne op af ren hævntørst!");
       Console.WriteLine("Inde i grotten åbner jorden sig under dig - en fælde! Du falder og falder og falder... Nu er der kun en vej ud: igennem!");
       Console.WriteLine("SORTÉR MONSTRENE MED DE RIGTIGE VÅBEN. SKRIV 'hjælp' FOR KOMMANDOER");
+      Console.WriteLine("\nGå videre med: gå <udgang>");
+      Console.WriteLine("\nAngrib med: angrib <monsterdel-nr> <våben-nr>");
     
     context.GetCurrent().Welcome();
 
@@ -66,12 +68,12 @@ class Game {
           break;
       
         case "hjælp":
-          Console.WriteLine(" - afslut/farvel   Forlad programmet");
-          Console.WriteLine(" - gå              Gå videre med: gå <udgang>");
-          Console.WriteLine(" - saml op         Saml genstanden op");        // NY
-          Console.WriteLine(" - angrib          angrib <monsterdel-nr> <våben-nr>");        // NY
-          Console.WriteLine(" - inventar        Vis dine våben");                   // NY
-          Console.WriteLine(" - hjælp           Afspil en hjælpebesked");
+          Console.WriteLine(" - afslut/farvel                Forlad programmet");
+          Console.WriteLine(" - gå <udgang>                  Følg udgang");
+          Console.WriteLine(" - saml op                      Saml genstanden op");        // NY
+          Console.WriteLine(" - angrib <del-nr> <våben-nr>   Angrib monsterets dele med et bestemt våben");   // NY
+          Console.WriteLine(" - inventar                     Se dine våben");                   // NY
+          Console.WriteLine(" - hjælp                        Afspil en hjælpebesked");
           break;
       
         default:

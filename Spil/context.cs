@@ -80,7 +80,6 @@ class Context
             || !int.TryParse(parameters[0], out int partNo)
             || !int.TryParse(parameters[1], out int weaponNo))
         {
-            Console.WriteLine("\nBrug: angrib <monsterdel-nr> <våben-nr>");
             return;
         }
 
