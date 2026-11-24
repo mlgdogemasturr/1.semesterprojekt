@@ -28,6 +28,9 @@ class Node
     {
         Console.WriteLine("\nUdgang:");
         foreach (string exit in edges.Keys)       // edges.Keys = alle retninger ("door", "north" ...)
+        {    
             Console.WriteLine(" - " + exit);
+        }
+        Console.WriteLine("\nGå videre med: gå <udgang>");
     }
 }

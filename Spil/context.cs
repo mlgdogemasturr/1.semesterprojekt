@@ -113,6 +113,9 @@ class Context
                     }
                     
                     Console.WriteLine("\nVi håber du har lært noget, og vil gøre en daglig indsats for at sortere dit affald rigtigt 💪");
+
+                    Console.WriteLine("\nTryk på en knap for at afslutte spillet.");
+                    Console.ReadLine();
                     
                     done = true;                            // Game's løkke stopper, når IsDone() giver true
                 }
