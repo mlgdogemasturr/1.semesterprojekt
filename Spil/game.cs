@@ -67,7 +67,7 @@ class Game {
       
         case "hjælp":
           Console.WriteLine(" - afslut/farvel   Forlad programmet");
-          Console.WriteLine(" - gå              Følg en udgang");
+          Console.WriteLine(" - gå              Gå videre med: gå <udgang>");
           Console.WriteLine(" - saml op         Saml genstanden op");        // NY
           Console.WriteLine(" - angrib          angrib <monsterdel-nr> <våben-nr>");        // NY
           Console.WriteLine(" - inventar        Vis dine våben");                   // NY
