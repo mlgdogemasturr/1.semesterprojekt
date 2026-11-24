@@ -31,6 +31,9 @@ class Context
         if (current.HasLivingMonster())                // Regel 1: monsteret skal gøres af med
         {
             Console.WriteLine("\nVejen er blokeret! Gør det af med monsteret først.");
+            player.LoseLife();                              // Mist ét liv
+            Console.WriteLine($"\nMonsteret angriber dig! Liv tilbage: {player.GetHealthPoints()}");
+            if (player.IsDead()) RestartLevel();            // Ingen liv tilbage? Genstart leveled
             return;
         }
         if (current.HasAvailableLoot())                // Regel 2: tingene skal samles op først
