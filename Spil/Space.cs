@@ -52,7 +52,6 @@ class Space : Node   // Space arver fra Node, så et rum kan forbindes med andre
         {
             Console.WriteLine($"\nDu ser {monster!.GetName()} nærme sig!");   // ! = "jeg ved, den ikke er null her"
             monster.PrintParts(); // Vis monsterets dele
-            Console.WriteLine("\nAngrib med: angrib <del-nr> <våben-nr>");
         }
 
         PrintLoot();
