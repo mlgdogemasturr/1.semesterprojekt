@@ -38,7 +38,7 @@ class Context
         }
         if (current.HasAvailableLoot())                // Regel 2: tingene skal samles op først
         {
-            Console.WriteLine("\nDu skal samle tingene op, før du går videre ('samle op').");
+            Console.WriteLine("\nDu skal samle tingene op, før du går videre ('saml op').");
             return;
         }
         // Når vi når hertil, er begge regler overholdt, så vi må gå videre
@@ -113,7 +113,7 @@ class Context
                     
                     Console.WriteLine("\nVi håber du har lært noget, og vil gøre en daglig indsats for at sortere dit affald rigtigt 💪");
 
-                    Console.WriteLine("\nTryk på en knap for at afslutte spillet.");
+                    Console.WriteLine("\nTryk på 'enter' for at afslutte spillet.");
                     Console.ReadLine();
                     
                     done = true;                            // Game's løkke stopper, når IsDone() giver true
