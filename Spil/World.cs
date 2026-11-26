@@ -69,10 +69,11 @@ class World
         level7.SetMonster(morgenmad);
         level7.AddLoot(new Weapon("Plastmasværdet", "plast"));
         
-        // ---------- Level 8: Smørbakke (pap + plast + rest) -> +1 liv ----------
+        // ---------- Level 8: Smørbakke (pap + plast + plast + plast) -> +1 liv ----------
         Monster smør = new Monster("KærgårdenMonstromet"); //evt. gør det til Lurpak el. andet for at specificere 
         smør.AddMonsterPart(new MonsterPart("Bund", "pap"));
         smør.AddMonsterPart(new MonsterPart("Låg", "plast"));
+        smør.AddMonsterPart(new MonsterPart("Folie", "plast"));
         smør.AddMonsterPart(new MonsterPart("Resten af bakken", "plast"));
         level8.SetMonster(smør);
         level8.AddLoot(new HealthPickup());
